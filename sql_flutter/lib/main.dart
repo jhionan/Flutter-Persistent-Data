@@ -38,15 +38,18 @@ class Home extends StatelessWidget {
 body: new ListView.builder(
   itemCount: _users.length,
   itemBuilder:(BuildContext context,int position){ //or itemBuilder:(_,int position)
-    return new Card(
-      color: Colors.white70,
-      elevation: 2.0,
-      child: new ListTile(
-        title: new Center(
-          child: Text("User: ${User.fromMap(_users[position]).username}"),
-        ),
-        subtitle: Center(
-          child: Text("Password ${User.map(_users[position]).password} id: ${User.map(_users[position]).id}"),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: new Card(
+        color: Colors.white70,
+        elevation: 2.0,
+        child: new ListTile(
+          title: new Center(
+            child: Text("User: ${User.fromMap(_users[position]).username}"),
+          ),
+          subtitle: Center(
+            child: Text("Password ${User.map(_users[position]).password} id: ${User.map(_users[position]).id}"),
+          ),
         ),
       ),
     );
