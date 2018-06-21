@@ -1,6 +1,6 @@
 # sql_flutter
 
-Teste of sql on flutter
+A SIMPLE CRUD SQLITE
 
 ## Getting Started
 
