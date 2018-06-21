@@ -41,9 +41,12 @@ body: new ListView.builder(
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: new Card(
-        color: Colors.white70,
+        color: Colors.white,
         elevation: 2.0,
         child: new ListTile(
+          leading: CircleAvatar(
+            child: Text("${User.fromMap(_users[position]).username.substring(0,1)}"),
+          ),
           title: new Center(
             child: Text("User: ${User.fromMap(_users[position]).username}"),
           ),
